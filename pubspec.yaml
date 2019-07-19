@@ -23,6 +23,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
+  html: ^0.14.0+2
+  intl:
   rc_cross_platform:
     git:
       url: https://github.com/rushio-consulting/rc_cross.git
