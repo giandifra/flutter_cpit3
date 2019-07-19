@@ -35,15 +35,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09CA9BD1837724C5785E01BA7857A4A2 /* FlutterMacOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlutterMacOS.framework; path = "../../../../../../../../../../flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.framework"; sourceTree = "<group>"; };
 		0CB2FDFA73AA0084EDCB4B5F860F439D /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 		0FAC8546C36EBD1C7C68818A0B9BEE92 /* Pods-Runner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Runner-dummy.m"; sourceTree = "<group>"; };
 		11F2D6B83FB5CC0DAB1E169E84E82BF2 /* Pods-Runner-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Runner-frameworks.sh"; sourceTree = "<group>"; };
 		18CEBD37137F8BF7A8F2237D120706C8 /* Pods-Runner-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Runner-acknowledgements.plist"; sourceTree = "<group>"; };
 		27212F9A9D4EC4F28EBD20BE5E31212B /* Pods-Runner-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Runner-acknowledgements.markdown"; sourceTree = "<group>"; };
 		37974C8B4D64A1F3CDBE86FE4B157256 /* Pods-Runner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Runner-Info.plist"; sourceTree = "<group>"; };
+		4076AA5567349DA2EC7103F8BE2D2C7E /* FlutterMacOS.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = FlutterMacOS.podspec; path = "../../../../../../../../../../../flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4E45055CAC7D74BF5FDB05DEC5BA5233 /* Pods-Runner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Runner.modulemap"; sourceTree = "<group>"; };
-		616DCADD1E7B9D19DA6141181D19A70B /* FlutterMacOS.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = FlutterMacOS.podspec; path = "../../../../../../../../../../flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5FBF072E89C1C95951AE30AC2F1403A5 /* FlutterMacOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlutterMacOS.framework; path = "../../../../../../../../../../../flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.framework"; sourceTree = "<group>"; };
 		669E8F25E1897672BDB80B7EB784DA24 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Runner.framework; path = "Pods-Runner.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		739795E6BBA1F3202BD87F75F6EB8463 /* Pods-Runner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Runner-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -64,10 +64,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A87B42244D6017ECD6E35D0D802B864 /* Pod */ = {
+		1E848E68709B2FA079A7ADAB074C1796 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				616DCADD1E7B9D19DA6141181D19A70B /* FlutterMacOS.podspec */,
+				4076AA5567349DA2EC7103F8BE2D2C7E /* FlutterMacOS.podspec */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -97,6 +97,14 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		815C7E95E1BB55DA900D6F239034442F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FBF072E89C1C95951AE30AC2F1403A5 /* FlutterMacOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		90CF4F7D0B66574BC7D52604BC8506F2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +124,8 @@
 		CF04C596F120ABEBB8357680BE13726C /* FlutterMacOS */ = {
 			isa = PBXGroup;
 			children = (
-				F924CF1805FCFDB7C6D31402C88A8EA8 /* Frameworks */,
-				4A87B42244D6017ECD6E35D0D802B864 /* Pod */,
+				815C7E95E1BB55DA900D6F239034442F /* Frameworks */,
+				1E848E68709B2FA079A7ADAB074C1796 /* Pod */,
 				DC88F0258D8D1378DB33C8880E66ECF2 /* Support Files */,
 			);
 			name = FlutterMacOS;
@@ -156,14 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				CBD43E0947D94E318A0ED1350CFF29ED /* OS X */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F924CF1805FCFDB7C6D31402C88A8EA8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				09CA9BD1837724C5785E01BA7857A4A2 /* FlutterMacOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

@@ -20,11 +20,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^0.1.2
-  html: ^0.14.0+2
-  intl:
+  intl: ^0.15.8
   rc_cross_platform:
     git:
       url: https://github.com/rushio-consulting/rc_cross.git
@@ -35,6 +31,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner: ^1.6.1
+  moor_generator:
 
 
 # For information on the generic Dart part of this file, see the
