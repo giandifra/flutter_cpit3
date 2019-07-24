@@ -1,7 +1,7 @@
-import 'package:flutter_cross_platform/src/models/message.dart';
+import 'package:flutter_cpit3/src/models/message.dart';
 
 abstract class CrossStorageBase {
-  Message getMessage(String id);
   List<Message> getAllMessages();
-  void saveMessage();
+  void saveMessage(List<Message> messages);
+  void clean();
 }
