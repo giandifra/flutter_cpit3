@@ -82,16 +82,18 @@ class _ChatScreenState extends State<ChatScreen> {
                   icon: Icon(Icons.send),
                   onPressed: () {
                     final text = _textEditingController.text;
-                    _textEditingController.clear();
-                    final myMessage = Message(
-                      text: text,
-                      date: DateTime.now(),
-                      type: MessageType.USER,
-                    );
-                    setState(() {
-                      chatMessages.insert(0, myMessage);
-                    });
-                    sendRequest(text);
+                    if (text.isNotEmpty) {
+                      _textEditingController.clear();
+                      final myMessage = Message(
+                        text: text,
+                        date: DateTime.now(),
+                        type: MessageType.USER,
+                      );
+                      setState(() {
+                        chatMessages.insert(0, myMessage);
+                      });
+                      sendRequest(text);
+                    }
                   },
                 ),
               ],
@@ -107,8 +109,8 @@ class _ChatScreenState extends State<ChatScreen> {
       final Map<String, String> queryParameters = {
         'text': text,
       };
-      final uri =
-          Uri.https('adventurous-structure.glitch.me', '/send', queryParameters);
+      final uri = Uri.https(
+          'adventurous-structure.glitch.me', '/send', queryParameters);
       print(uri.queryParameters.toString());
       final response = await http.post(
         uri,
