@@ -7,7 +7,9 @@ import 'app.dart';
 
 void main() {
   final platform = CrossPlatform();
-  //https://github.com/flutter/flutter/issues/33881
+
+  // https://github.com/flutter/flutter/wiki/Desktop-shells#tooling
+  // bug https://github.com/flutter/flutter/issues/33881
   if (platform.isDesktop) {
     debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
   }
