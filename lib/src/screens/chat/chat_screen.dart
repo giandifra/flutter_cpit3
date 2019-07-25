@@ -12,7 +12,6 @@ class ChatScreen extends StatefulWidget {
 class _ChatScreenState extends State<ChatScreen> {
   List<Message> chatMessages = [];
   CrossStorage _crossStorage;
-
   TextEditingController _textEditingController;
 
   @override
@@ -31,7 +30,7 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 
   Future<bool> _onWillPop() async {
-    _crossStorage.saveMessage(chatMessages);
+    _crossStorage.saveMessages(chatMessages);
     return true;
   }
 
@@ -93,6 +92,8 @@ class _ChatScreenState extends State<ChatScreen> {
                         chatMessages.insert(0, myMessage);
                       });
                       sendRequest(text);
+                    } else {
+                      showPopup(context, 'Campo di testo vuoto');
                     }
                   },
                 ),
@@ -104,6 +105,7 @@ class _ChatScreenState extends State<ChatScreen> {
     );
   }
 
+  /// Effettuo la richiesta HTTP POST al webservice
   void sendRequest(String text) async {
     try {
       final Map<String, String> queryParameters = {
@@ -132,12 +134,16 @@ class _ChatScreenState extends State<ChatScreen> {
     }
   }
 
+  /// Mostro un popup a schermo
   showPopup(BuildContext context, String error) {
     showDialog(
         context: context,
         builder: (context) {
           return AlertDialog(
-            title: Text('Si è verificato un errore'),
+            title: Text(
+              'ERRORE',
+              style: TextStyle(color: Colors.red),
+            ),
             content: Text(error),
           );
         });

@@ -20,7 +20,7 @@ class Message {
     return map;
   }
 
-  String get dateFormatted => DateFormat("hh:mm").format(date);
+  String get dateFormatted => DateFormat("HH:mm").format(date);
 }
 
 enum MessageType {

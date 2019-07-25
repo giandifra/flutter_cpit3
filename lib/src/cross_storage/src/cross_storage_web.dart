@@ -23,7 +23,7 @@ class CrossStorage extends CrossStorageBase {
   }
 
   @override
-  void saveMessage(List<Message> messages) {
+  void saveMessages(List<Message> messages) {
     window.localStorage['messages'] =
         json.encode(messages.map((m) => m.toMap()).toList());
   }

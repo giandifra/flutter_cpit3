@@ -1,8 +1,9 @@
 import 'dart:convert';
 import 'dart:io' hide Platform;
+import 'package:flutter_cpit3/src/cross_platform/cross_platform.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:flutter_cpit3/src/models/message.dart';
-import 'package:rc_cross_platform/rc_cross_platform.dart';
+//import 'package:rc_cross_platform/rc_cross_platform.dart';
 
 import 'cross_storage_base.dart';
 
@@ -12,7 +13,7 @@ class CrossStorage extends CrossStorageBase {
 
   static Future<CrossStorage> get instance async {
     if (_instance == null) {
-      final platform = Platform();
+      final platform = CrossPlatform();
       String path;
       if (platform.isMobile) {
         final tmpDirectory = await getTemporaryDirectory();
@@ -39,7 +40,7 @@ class CrossStorage extends CrossStorageBase {
   }
 
   @override
-  void saveMessage(List<Message> messages) {
+  void saveMessages(List<Message> messages) {
     _file.writeAsStringSync(
         json.encode(messages.map((m) => m.toMap()).toList()));
   }
