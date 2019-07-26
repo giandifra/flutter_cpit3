@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cpit3/src/screens/intro/pages/about_page.dart';
 
 import 'package:flutter_cpit3/src/screens/intro/pages/flutter_architecture_page.dart';
 import 'package:flutter_cpit3/src/screens/intro/pages/flutter_description_page.dart';
@@ -36,14 +37,15 @@ class _PageSelector extends StatelessWidget {
         children: <Widget>[
           Expanded(
             child: TabBarView(children: [
+              AboutPage(),
               TitlePage(),
               FlutterPage(),
               FlutterDescriptionPage(),
               FlutterArchitecturePage(),
               FlutterWebArchitecturePage(),
+              HummingbirdPage(),
               QrUrlPage(),
               QrGitPage(),
-              HummingbirdPage(),
               ThanksPage(),
             ]),
           ),
@@ -82,8 +84,8 @@ class IntroScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: DefaultTabController(
-        length: 9,
-        child: _PageSelector(length: 9),
+        length: 10,
+        child: _PageSelector(length: 10),
       ),
     );
   }
