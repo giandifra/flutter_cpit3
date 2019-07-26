@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cpit3/src/screens/chat/chat_screen.dart';
+import 'package:flutter_cpit3/src/screens/intro/intro_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -13,6 +14,18 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.max,
           children: <Widget>[
+            RaisedButton(
+              color: Colors.pink,
+              child: Text(
+                'Slide',
+                style: TextStyle(color: Colors.white),
+              ),
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => IntroScreen()),
+                );
+              },
+            ),
             RaisedButton(
               color: Colors.pink,
               child: Text(
