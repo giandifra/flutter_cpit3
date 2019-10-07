@@ -1,6 +1,11 @@
 # flutter_cpit3
 
-A sample Flutter chat app. You can chat with a Bot created with DialogFlow
+A simple Flutter chat app. You can chat with a Bot created with DialogFlow (a piadina generator).
+The scope of this project presented at Campus Party Italy 2019 is to underline the web potentiality of Flutter. Unique project that can run on Android, iOS, macOS, Windows and Web.
+
+You can try the app [here](https://cpit3.digit.srl/)
+
+The application include the slides of thw workshop. (I didn't care about responsive of slides)
 
 ## Getting Started
 
